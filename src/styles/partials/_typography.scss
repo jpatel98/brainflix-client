@@ -1,0 +1,14 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+@font-face {
+    font-family: Avenir Next;
+    src: url(../../assets/fonts/AvenirNextLTPro-Regular.woff) format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Avenir Next;
+    src: url(../../assets/fonts/AvenirNextLTPro-Bold.woff) format('woff');
+    font-weight: 700;
+}
