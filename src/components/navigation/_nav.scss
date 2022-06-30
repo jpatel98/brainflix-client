@@ -1,5 +1,7 @@
 @use '../../styles/partials/colors.scss' as *;
 @use '../../styles/partials/typography.scss' as *;
+@use '../../styles/partials/breakpoints.scss' as *;
+
 .navbar{
     display: flex;
     flex-direction: column;
@@ -17,6 +19,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        gap: 1rem;
         &-input{
             padding: 0.5rem;
             padding-left: 2rem;
@@ -27,6 +30,8 @@
             border-radius: 0.25rem;
             background-color: $alabaster;
             border: 1.5px solid $mercury;
+            width: 100%;
+            height: 2.25rem;
         } ::placeholder{
             font-size: 0.75rem;
         }
@@ -40,14 +45,32 @@
     &__upload{
         background-color: $braninflix-blue;
         color: $white;
+        height: 2.5rem;
         width: 100%;
         text-align: center;
-        padding: 0.75rem;
+        padding: 0.5rem;
         background-image: url('/assets/icons/upload.svg');
         background-repeat: no-repeat;
         background-position: left;
         background-position-x: 0.5rem;
         border-radius: 0.25rem;
         font-family: 'Avenir Next';
+    }
+}
+
+@include tablet{
+    .navbar{
+        flex-direction: row;
+        padding: 1.5rem;
+        &__search{
+            justify-content: flex-end;
+            &-input{
+                width: 240px;
+            }
+        }
+        &__upload{
+            
+            max-width: 9.375rem;
+        }
     }
 }
