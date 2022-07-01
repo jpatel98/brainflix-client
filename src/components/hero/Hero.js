@@ -1,7 +1,8 @@
 import React from 'react';
 import videos from '../../data/videos.json';
 import './_hero.scss'
-let vidBanner = videos[0].image
+let vidBanner = videos[0].image;
+
 
 const hero = () => {
     

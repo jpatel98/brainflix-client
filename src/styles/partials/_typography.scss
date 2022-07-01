@@ -12,3 +12,38 @@
     src: url(../../assets/fonts/AvenirNextLTPro-Bold.woff) format('woff');
     font-weight: 700;
 }
+
+body{
+    font-family: 'Avenir Next';
+}
+
+// Mobile text styles
+.page-header{
+    font-size: 1.5rem;
+    line-height: 22px;
+    font-weight: 700;
+}
+
+.section-header{
+    font-size: 0.75rem;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+.section-subheader{
+    font-size: 0.813rem;
+    line-height: 18px;
+    font-weight: 700;
+}
+
+.body-copy{
+    font-size: 0.813rem;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.label-text, .button-text{
+    font-size: 0.75rem;
+    line-height: 20px;
+    font-weight: 700;
+}

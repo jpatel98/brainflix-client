@@ -4,10 +4,8 @@
 
 .hero {
     background-color: $brainflix-black;
-    height: 57.19vw;
     &__video {
       width: 100%;
-      height: 57.19vw;
       &:focus {
         outline-width: 0;
       }
