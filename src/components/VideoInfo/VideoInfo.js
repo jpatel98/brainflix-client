@@ -13,7 +13,7 @@ const VideoInfo = props => {
             <div className='viddetails__data'>
                 {/* Div 1 to hold channel name and views */}
                 <div className='viddetails__data-container body-copy'>
-                    <h3 className="viddetails__data-container-channel">By {props.channel[0]}</h3>
+                    <p className="viddetails__data-container-channel">By {props.channel[0]}</p>
                     <div className="viddetails__data-container-views">
                         <img src={viewsLogo} alt="views icon"/>
                         <p>{props.views[0]}</p>

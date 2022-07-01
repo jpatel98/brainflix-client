@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/Nav';
 import Hero from './components/Hero/Hero';
 import vidData from './data/video-details.json';
 import VideoInfo from './components/VideoInfo/VideoInfo';
+import Comments from './components/Comments/Comments';
 
 
 class App extends React.Component {
@@ -16,7 +17,7 @@ class App extends React.Component {
   render(){
     // Setting vidArr variable from state object
     let vidArr = this.state.videoData;
-    console.log(vidArr);
+    // console.log(vidArr);
     // Mapping through the vidArr array and sending details to child component
     const vidArrTitles = vidArr.map(i => i.title)
     const vidArrChannels = vidArr.map(i => i.channel)
@@ -29,6 +30,8 @@ class App extends React.Component {
       return new Date (i.timestamp).toLocaleDateString("en-US", options);
     })
 
+    //passing all comments from vidArr to comments component
+    const commentsArrLength = vidArr.map(i => i.comments.length)
     return (
       <>
         <NavBar/>
@@ -41,6 +44,7 @@ class App extends React.Component {
           likes={vidArrLikes}
           description={vidArrDesc}
         />
+        <Comments length={commentsArrLength}/>
       </>
     );
   }

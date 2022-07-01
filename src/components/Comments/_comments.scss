@@ -1,0 +1,69 @@
+@use '../../styles/partials/colors.scss' as *;
+@use '../../styles/partials/typography.scss' as *;
+@use '../../styles/partials/breakpoints.scss' as *;
+
+.comments{
+    padding: 0 1rem;
+    &__length{
+        font-weight: 700;
+    }
+    &__input{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 1rem 0;
+        border-bottom: 1px solid $mercury;
+        &-img{
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 100%;
+            object-fit: cover;
+            margin-right: 1rem;
+            margin-top: 1rem;
+        }
+        &-info-form{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            label {
+                font-weight: 700;
+                color: $silver;
+            }
+            &-comment{
+                height: 5rem;
+                width: 100%;
+                background-color: $alabaster;
+                border-radius: 0.25rem;
+                border: 1.5px solid $mercury;
+                padding: 0.5rem;
+                margin-bottom: 1.5rem;
+                resize: none;   
+                box-sizing: border-box;
+            }
+            ::placeholder{
+                font-family: 'Avenir Next';
+                color: $brainflix-darkblack;
+                opacity: 1;
+            }
+            &-btn {
+                background-color: $brainflix-blue;
+                color: $white;
+                height: 3rem;
+                width: 100%;
+                border-radius: 4px;
+                border: none;
+                background-image: url('../../assets/icons/add_comment.svg');
+                background-repeat: no-repeat;
+                background-position-y: center;
+                background-position-x: .5rem;
+                &:hover {
+                    background-color: $brainflix-darkblack;
+                }
+            }
+        }
+    }
+}

@@ -19,6 +19,9 @@
             justify-content: space-between;
             align-items: center;
             padding-top: 1rem;
+            &-channel{
+                font-weight: 700;
+            }
             &-date{
                 color: $silver;
             }
@@ -47,6 +50,5 @@
     }
     &__description{
         padding-top: 1rem;
-        padding-bottom: 1rem;
     }
 }
