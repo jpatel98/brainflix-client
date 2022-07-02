@@ -12,7 +12,7 @@
         justify-content: center;
         align-items: flex-start;
         padding: 1rem 0;
-        border-bottom: 1px solid $mercury;
+        border-bottom: 2px solid $mercury;
         &-img{
             width: 2.75rem;
             height: 2.75rem;
@@ -38,7 +38,7 @@
                 width: 100%;
                 background-color: $alabaster;
                 border-radius: 0.25rem;
-                border: 1.5px solid $mercury;
+                border: 1px solid $mercury;
                 padding: 0.5rem;
                 margin-bottom: 1.5rem;
                 resize: none;   
@@ -48,6 +48,10 @@
                 font-family: 'Avenir Next';
                 color: $brainflix-darkblack;
                 opacity: 1;
+            }:active{
+                border: 2px solid $brainflix-blue;
+            } :invalid{
+                border: 1px solid #D22D2D;
             }
             &-btn {
                 background-color: $brainflix-blue;
@@ -60,8 +64,41 @@
                 background-repeat: no-repeat;
                 background-position-y: center;
                 background-position-x: .5rem;
+                cursor: pointer;
                 &:hover {
-                    background-color: $brainflix-darkblack;
+                    background-color: $brainflix-darkblue;
+                }
+            }
+        }
+    }
+    &__dynamic{
+        padding: 1rem 0;
+        border-bottom: 2px solid $mercury;
+        display: flex;
+        &-img{
+            border-radius: 100%;
+            object-fit: cover;
+            margin-right: 1rem;
+            margin-top: 1rem;
+            width: 2.75rem;
+            height: 2.75rem;
+            background-color: $mercury;
+            
+        }
+        &-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            &-top{
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 1rem;
+                &-name{
+                font-weight: 700;
+                color: $brainflix-black;
+                }
+                &-date{
+                color: $silver;
                 }
             }
         }

@@ -31,7 +31,7 @@ class App extends React.Component {
     })
 
     //passing all comments from vidArr to comments component
-    const commentsArrLength = vidArr.map(i => i.comments.length)
+    const commentsArr = vidArr.map(i => i.comments)
     return (
       <>
         <NavBar/>
@@ -44,7 +44,7 @@ class App extends React.Component {
           likes={vidArrLikes}
           description={vidArrDesc}
         />
-        <Comments length={commentsArrLength}/>
+        <Comments commentsArr={commentsArr}/>
       </>
     );
   }

@@ -10,7 +10,7 @@ const nav = () => {
                 <input type="text" placeholder='Search' className='navbar__search-input'></input>
                 <img src={userImg} alt="User profile" className='navbar__search-userImg'/>
             </div>
-            <div className='navbar__upload button-text'>UPLOAD</div>
+            <button className='navbar__upload button-text'>UPLOAD</button>
         </nav>
     );
 };
