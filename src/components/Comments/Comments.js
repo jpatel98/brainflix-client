@@ -3,13 +3,15 @@ import userImg from '../../assets/images/Mohan-muruge.jpg'
 import './_comments.scss'
 
 const Comments = props => {
-    // getting a nested array of comment data so mapping through it two times
-    // console.log(props.commentsArr);
-    let dynamicComments = props.commentsArr.map(nested => nested.map((i) => {
+    // getting an array of data of current video being displayed.
 
+    // console.log(props.currentVid.comments);
+    let dynamicComments = props.currentVid.comments.map(i => {
+        
         //converting numeric timestamps to dates
         const options = { year: 'numeric', month: 'numeric', day: 'numeric' }; 
         const dateStr = new Date (i.timestamp).toLocaleDateString("en-US", options);
+        // console.log(dateStr);
 
         return <div className='comments__dynamic body-copy'>
             <div><div className='comments__dynamic-img'></div></div>
@@ -21,14 +23,13 @@ const Comments = props => {
                 <p className='comments__dynamic-container-text'>{i.comment}</p>
             </div>
         </div>
-        
+    })
 
-    })) 
     // console.log(dynamicComments);
     return (
         <div className='comments'>
             <p className='comments__length section-header'>
-                {props.commentsArr[0].length} Comments
+                {dynamicComments.length} Comments
             </p>
             {/* Div for comments form */}
             <div className="comments__input">
@@ -39,7 +40,7 @@ const Comments = props => {
                         <button className="comments__input-info-form-btn">COMMENT</button>
                     </form>
             </div>
-        {dynamicComments[0]}
+        {dynamicComments}
         </div>
     );
 };

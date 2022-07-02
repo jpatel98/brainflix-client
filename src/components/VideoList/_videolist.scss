@@ -11,6 +11,12 @@
         &-item{
             display: flex;
             padding-top: 1rem;
+            a{
+                display: flex;
+                cursor: pointer;
+                color: $brainflix-black;
+                text-decoration: none;
+            }
             &-image{
                 width: 8.5rem;
                 height: 4.5rem;

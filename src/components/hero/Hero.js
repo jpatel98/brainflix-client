@@ -1,14 +1,12 @@
 import React from 'react';
-import videos from '../../data/videos.json';
-import './_hero.scss'
-let vidBanner = videos[0].image;
+import './_hero.scss';
 
 
-const hero = () => {
-    
+const hero = props => {
+    let currentVidImg = props.currentVid.image;
     return (
         <div className="hero">
-            <video className="hero__video" controls poster={vidBanner}></video>
+            <video className="hero__video" controls poster={currentVidImg}></video>
         </div>
         
     );
