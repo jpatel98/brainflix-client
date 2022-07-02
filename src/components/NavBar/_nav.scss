@@ -58,7 +58,10 @@
         border-radius: 0.25rem;
         border: none;
         cursor: pointer;
-    }
+        &:hover {
+            background-color: $brainflix-darkblue;
+        }
+    } 
 }
 
 @include tablet{

@@ -5,7 +5,7 @@ import Hero from './components/Hero/Hero';
 import vidData from './data/video-details.json';
 import VideoInfo from './components/VideoInfo/VideoInfo';
 import Comments from './components/Comments/Comments';
-
+import VideoList from './components/VideoList/VideoList'
 
 class App extends React.Component {
 
@@ -19,11 +19,11 @@ class App extends React.Component {
     let vidArr = this.state.videoData;
     // console.log(vidArr);
     // Mapping through the vidArr array and sending details to child component
-    const vidArrTitles = vidArr.map(i => i.title)
-    const vidArrChannels = vidArr.map(i => i.channel)
-    const vidArrViews = vidArr.map(i => i.views)
-    const vidArrLikes = vidArr.map(i=>i.likes)
-    const vidArrDesc = vidArr.map(i => i.description)
+    const vidArrTitles = vidArr.map(i => i.title);
+    const vidArrChannels = vidArr.map(i => i.channel);
+    const vidArrViews = vidArr.map(i => i.views);
+    const vidArrLikes = vidArr.map(i=>i.likes);
+    const vidArrDesc = vidArr.map(i => i.description);
     // converting numeric timestamps to dates
     const vidArrDates = vidArr.map((i) => {
       const options = { year: 'numeric', month: 'numeric', day: 'numeric' }; 
@@ -31,7 +31,7 @@ class App extends React.Component {
     })
 
     //passing all comments from vidArr to comments component
-    const commentsArr = vidArr.map(i => i.comments)
+    const commentsArr = vidArr.map(i => i.comments);
     return (
       <>
         <NavBar/>
@@ -44,7 +44,12 @@ class App extends React.Component {
           likes={vidArrLikes}
           description={vidArrDesc}
         />
-        <Comments commentsArr={commentsArr}/>
+        <Comments 
+          commentsArr={commentsArr}
+        />
+        <VideoList
+          vidArrList = {vidArr}
+        />
       </>
     );
   }

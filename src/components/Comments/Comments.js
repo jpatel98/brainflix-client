@@ -24,21 +24,17 @@ const Comments = props => {
         
 
     })) 
-    console.log(dynamicComments);
-    // let commentDate = props.commentsArr.map(nested => nested.map(i => i.timestamp))
-    // let commentText = props.commentsArr.map(nested => nested.map(i => i.comment))
-    // const commentNameActual = commentName.map(i => <h1>{i}</h1>);
-    // console.log(commentName);
+    // console.log(dynamicComments);
     return (
         <div className='comments'>
-            <p className='comments__length body-copy'>
+            <p className='comments__length section-header'>
                 {props.commentsArr[0].length} Comments
             </p>
             {/* Div for comments form */}
             <div className="comments__input">
                     <img className="comments__input-img" src={userImg} alt="UserId"/>
                     <form className="comments__input-info-form">
-                        <label className="body-copy" for="comment-field">JOIN THE CONVERSATION</label>
+                        <label className="section-header" for="comment-field">JOIN THE CONVERSATION</label>
                         <textarea required className="comments__input-info-form-comment body-copy" id="comment-field" name="comment" placeholder="Add a new comment"></textarea>
                         <button className="comments__input-info-form-btn">COMMENT</button>
                     </form>
