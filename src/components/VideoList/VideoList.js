@@ -2,15 +2,7 @@ import React from 'react';
 import './_videolist.scss';
 
 const VideoList = props => {
-    // console.log(props);
     const vidListArr = props.vidList;
-    // console.log(vidId);
-    // console.log(vidId);
-    // const handleVideoSelect = (e) => {
-    //     e.preventDefault();
-
-    //     props.onSelectVid();
-    // }
 
     const vidList = vidListArr.map((nested) => {
 
@@ -33,7 +25,6 @@ const VideoList = props => {
             </a>
         </div>
     })
-    // console.log(vidList);
 
     return (
         <div className='vidlist'>

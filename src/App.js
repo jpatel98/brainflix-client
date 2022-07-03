@@ -18,31 +18,13 @@ class App extends React.Component {
 
   selectVideo = (videoId) => {
     const selectedVideo = vidDataDetails.find(video => video.id === videoId);
-    // console.log(selectedVideo);
     this.setState({
       currentVid: selectedVideo
     })
   }
 
   render(){
-    // Setting vidArr variable from state object
-    // let vidArr = this.state.videoData;
-    // console.log(vidArr);
-    // Mapping through the vidArr array and sending details to child component
-    // const vidArrTitles = vidArr.map(i => i.title);
-    // const vidArrChannels = vidArr.map(i => i.channel);
-    // const vidArrViews = vidArr.map(i => i.views);
-    // const vidArrLikes = vidArr.map(i=>i.likes);
-    // const vidArrDesc = vidArr.map(i => i.description);
-    // converting numeric timestamps to dates
-    // const vidArrDates = vidArr.map((i) => {
-    //   const options = { year: 'numeric', month: 'numeric', day: 'numeric' }; 
-    //   return new Date (i.timestamp).toLocaleDateString("en-US", options);
-    // })
-    // console.log(this.state.videoDataDetails)
-    //passing all comments from vidArr to comments component
-    // const commentsArr = vidArr.map(i => i.comments);
-
+   // filtering through the videos to find the current video based on the id
     const filteredVid = this.state.videos.filter(video => video.id !== this.state.currentVid.id);
     return (
       <>
