@@ -19,14 +19,14 @@ const VideoInfo = props => {
                 {/* Div 1 to hold channel name and views */}
                 <div className='viddetails__data-container body-copy'>
                     <p className="viddetails__data-container-channel">By {currVidInfo.channel}</p>
+                    <p className="viddetails__data-container-date">{currVidDate}</p>
+                </div>
+                {/* Div 2 to hold upload date and likes */}
+                <div className='viddetails__data-container body-copy'>
                     <div className="viddetails__data-container-views">
                         <img src={viewsLogo} alt="views icon"/>
                         <p>{currVidInfo.views}</p>
                     </div>
-                </div>
-                {/* Div 2 to hold upload date and likes */}
-                <div className='viddetails__data-container body-copy'>
-                    <p className="viddetails__data-container-date">{currVidDate}</p>
                     <div className="viddetails__data-container-likes">
                         <img src={likesLogo} alt="views icon"/>
                         <p>{currVidInfo.likes}</p>

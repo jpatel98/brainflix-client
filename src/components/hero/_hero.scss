@@ -3,7 +3,7 @@
 @use '../../styles/partials/breakpoints.scss' as *;
 
 .hero {
-    background-color: $brainflix-black;
+    background-color: $brainflix-darkblack;
     height: 57.19vw;
     video {
       width: 100%;
@@ -14,3 +14,14 @@
       }
     }
   }
+
+
+@include tablet {
+    .hero {
+      display: flex;
+      justify-content: center;
+      video{
+        padding: 0 1.5rem;
+      }
+    }
+}
