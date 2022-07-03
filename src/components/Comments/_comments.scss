@@ -47,15 +47,17 @@
                 margin-bottom: 1.5rem;
                 resize: none;   
                 box-sizing: border-box;
+                overflow:hidden;
+                :active{
+                    border: 2px solid $brainflix-blue;
+                } :invalid{
+                    border: 1px solid #D22D2D;
+                }
             }
             ::placeholder{
                 font-family: 'Avenir Next';
                 color: $brainflix-darkblack;
                 opacity: 1;
-            }:active{
-                border: 2px solid $brainflix-blue;
-            } :invalid{
-                border: 1px solid #D22D2D;
             }
             &-btn {
                 background-color: $brainflix-blue;
