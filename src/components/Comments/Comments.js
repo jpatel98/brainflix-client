@@ -14,7 +14,9 @@ const Comments = props => {
         // console.log(dateStr);
 
         return <div className='comments__dynamic body-copy'>
-            <div><div className='comments__dynamic-img'></div></div>
+            <div className = 'comments__dynamic-div'>
+                <div className='comments__dynamic-img'></div>
+            </div>
             <div className='comments__dynamic-container'>
                 <div className='comments__dynamic-container-top'>
                     <p className='comments__dynamic-container-top-name'>{i.name}</p>

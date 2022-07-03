@@ -50,10 +50,7 @@ class App extends React.Component {
         <Hero currentVid={this.state.currentVid}/>
         <VideoInfo currentVid={this.state.currentVid}/>
         <Comments currentVid={this.state.currentVid}/>
-        <VideoList 
-          vidList = {filteredVid}
-          onSelectVid = {this.selectVideo}
-        />
+        <VideoList vidList = {filteredVid} onSelectVid = {this.selectVideo}/>
       </>
     );
   }

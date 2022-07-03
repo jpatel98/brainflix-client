@@ -7,10 +7,10 @@ const nav = () => {
         <nav className='navbar'>
             <img src={logo} alt="BrainFlix logo" className='navbar__img'/>
             <div className='navbar__search'>
-                <input type="text" placeholder='Search' className='navbar__search-input'></input>
-                <img src={userImg} alt="User profile" className='navbar__search-userImg'/>
+                    <input type="text" placeholder='Search' className='navbar__search-input'></input>
+                    <img src={userImg} alt="User profile" className='navbar__search-userImg'/>
             </div>
-            <button className='navbar__upload button-text'>UPLOAD</button>
+            <button className='navbar__upload button-text'>UPLOAD</button> 
         </nav>
     );
 };

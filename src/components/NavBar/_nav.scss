@@ -11,8 +11,8 @@
     gap: 1rem;
 
     &__img{
-        width: 7.5rem;
-        height: 1.563rem;
+        max-width: 7.5rem;
+        max-height: 1.563rem;
     }
     &__search{
         display: flex;
@@ -58,6 +58,7 @@
         border-radius: 0.25rem;
         border: none;
         cursor: pointer;
+        align-self: flex-end;
         &:hover {
             background-color: $brainflix-darkblue;
         }
@@ -75,8 +76,8 @@
             }
         }
         &__upload{
-            
             max-width: 9.375rem;
+            padding: 0 32px;
         }
     }
 }
