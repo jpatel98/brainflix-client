@@ -68,7 +68,7 @@
 @include tablet{
     .navbar{
         flex-direction: row;
-        padding: 1.5rem;
+        padding: 1rem 2.5rem;
         &__search{
             justify-content: flex-end;
             &-input{
@@ -79,5 +79,12 @@
             max-width: 9.375rem;
             padding: 0 32px;
         }
+    }
+}
+
+// desktop layout
+@include desktop{
+    .navbar{
+        padding: 1rem 7rem;
     }
 }

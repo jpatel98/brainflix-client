@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import NavBar from './components/NavBar/Nav';
 import Hero from './components/Hero/Hero';
 import vidDataDetails from './data/video-details.json';
@@ -48,9 +48,13 @@ class App extends React.Component {
       <>
         <NavBar/>
         <Hero currentVid={this.state.currentVid}/>
-        <VideoInfo currentVid={this.state.currentVid}/>
-        <Comments currentVid={this.state.currentVid}/>
-        <VideoList vidList = {filteredVid} onSelectVid = {this.selectVideo}/>
+        <div className='div1'>
+          <div className='div2'>
+            <VideoInfo currentVid={this.state.currentVid}/>
+            <Comments currentVid={this.state.currentVid}/>
+          </div>
+          <div className='div3'><VideoList vidList = {filteredVid} onSelectVid = {this.selectVideo}/></div>
+        </div>
       </>
     );
   }

@@ -42,6 +42,17 @@
 
 @include tablet{
     .vidlist{
-        padding: 0 1.5rem;
+        padding: 0 2.5rem;
+    }
+}
+
+@include desktop{
+    .vidlist{
+        padding: 0 1rem;
+        &__container{
+            &-item{
+                width: 20rem;
+            }
+        }
     }
 }

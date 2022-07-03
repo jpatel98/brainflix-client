@@ -11,8 +11,8 @@
     &__data{
         display: flex;
         justify-content: space-between;
-        border-bottom: 2px solid $mercury;
-        border-top: 2px solid $mercury;
+        border-bottom: 1px solid $mercury;
+        border-top: 1px solid $mercury;
         padding-bottom: 1rem;
         &-container{
             display: flex;
@@ -55,8 +55,13 @@
 
 @include tablet {
     .viddetails{
-        padding: 1.5rem;
+        padding: 1.5rem 2.5rem;
+        &__title{
+            padding: 0;
+        }
         &__data{
+            border-top: none;
+            padding: 0;
             &-container{
                 flex-direction: row;
                 &-views{
@@ -65,6 +70,21 @@
                 &-likes{
                     padding: 0;
                 }
+            }
+        }
+    }
+}
+
+// desktop layout
+@include desktop {
+    .viddetails{
+        padding-right: 0;
+        &__description{
+            padding-right: 1rem;
+        }
+        &__data{
+            &-container{
+                padding-right: 1rem;
             }
         }
     }
