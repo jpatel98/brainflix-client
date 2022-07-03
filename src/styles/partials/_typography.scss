@@ -48,7 +48,42 @@ body{
     font-weight: 700;
 }
 
+// tablet text styles
 @include tablet{
+    .page-header{
+        font-size: 2.063rem;
+        line-height: 44px;
+        font-weight: 700;
+    }
+
+    .section-header{
+        font-size: 0.75rem;
+        line-height: 20px;
+        font-weight: 700;
+    }
+
+    .section-subheader{
+        font-size: 0.875rem;
+        line-height: 22px;
+        font-weight: 700;
+    }
+
+    .body-copy{
+        font-size: 0.875rem;
+        line-height: 22px;
+        font-weight: 400;
+    }
+
+    .label-text, .button-text{
+        font-size: 0.75rem;
+        line-height: 20px;
+        font-weight: 700;
+    }
+}
+
+// desktop text styles
+
+@include desktop{
     // Mobile text styles
 .page-header{
     font-size: 2.063rem;

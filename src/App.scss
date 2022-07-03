@@ -1,0 +1,24 @@
+@use './styles/partials/breakpoints.scss' as *;
+@use './styles/partials/colors.scss' as *;
+
+@include desktop{
+    .div1{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        padding: 0 5rem;
+    }
+    .div2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        width: 75%;
+    }
+    .div3{
+        padding: 24px 0;
+        align-self: flex-start;
+        width: 25%;
+        border-left: 1px solid $mercury;
+    }
+}
