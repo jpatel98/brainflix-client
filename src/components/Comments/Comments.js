@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatDistanceToNow } from 'date-fns';
 import userImg from '../../assets/images/Mohan-muruge.jpg'
 import './_comments.scss'
 
@@ -10,7 +11,7 @@ const Comments = props => {
         
         //converting numeric timestamps to dates
         const options = { year: 'numeric', month: 'numeric', day: 'numeric' }; 
-        const dateStr = new Date (i.timestamp).toLocaleDateString("en-US", options);
+        const dateStr = formatDistanceToNow(i.timestamp, [options]);
         // console.log(dateStr);
 
         return <div className='comments__dynamic body-copy'>
@@ -20,7 +21,7 @@ const Comments = props => {
             <div className='comments__dynamic-container'>
                 <div className='comments__dynamic-container-top'>
                     <p className='comments__dynamic-container-top-name'>{i.name}</p>
-                    <p className='comments__dynamic-container-top-date'>{dateStr}</p>
+                    <p className='comments__dynamic-container-top-date'>{dateStr} ago</p>
                 </div>
                 <p className='comments__dynamic-container-text'>{i.comment}</p>
             </div>
