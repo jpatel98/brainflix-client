@@ -9,12 +9,8 @@ const Comments = props => {
         
         //converting numeric timestamps to dates
         const options = { year: 'numeric', month: 'numeric', day: 'numeric' }; 
-<<<<<<< HEAD
-        const dateStr = new Date (i.timestamp).toLocaleDateString("en-US", options);
-=======
         const dateStr = formatDistanceToNow(i.timestamp, [options]);
         // console.log(dateStr);
->>>>>>> develop
 
         return <div className='comments__dynamic body-copy'>
             <div className = 'comments__dynamic-div'>
