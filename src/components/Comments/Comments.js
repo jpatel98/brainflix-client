@@ -6,13 +6,11 @@ import './_comments.scss'
 const Comments = props => {
     // getting an array of data of current video being displayed.
 
-    // console.log(props.currentVid.comments);
     let dynamicComments = props.currentVid.comments.map(i => {
         
         //converting numeric timestamps to dates
         const options = { year: 'numeric', month: 'numeric', day: 'numeric' }; 
         const dateStr = formatDistanceToNow(i.timestamp, [options]);
-        // console.log(dateStr);
 
         return <div className='comments__dynamic body-copy'>
             <div className = 'comments__dynamic-div'>
@@ -28,7 +26,6 @@ const Comments = props => {
         </div>
     })
 
-    // console.log(dynamicComments);
     return (
         <div className='comments'>
             <p className='comments__length section-header'>
