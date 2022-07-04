@@ -1,0 +1,40 @@
+@use '../../styles/partials/colors.scss' as *;
+@use '../../styles/partials/typography.scss' as *;
+@use '../../styles/partials/breakpoints.scss' as *;
+
+.hero {
+    background-color: $brainflix-darkblack;
+    video {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 16/9;
+    }
+  }
+
+
+@include tablet {
+    .hero {
+      padding: 0 2.5rem;
+      display: flex;
+      justify-content: center;
+      video{
+        width: 70%;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+      }
+    }
+}
+
+// desktop layout
+@include desktop{
+    .hero {
+      padding: 0 10rem;
+      display: flex;
+      justify-content: center;
+      video{
+        width: 90%;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+      }
+    }
+}
