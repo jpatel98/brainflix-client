@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatDistanceToNow } from 'date-fns';
 import './_videoinfo.scss';
 import viewsLogo from '../../assets/icons/views.svg'
 import likesLogo from '../../assets/icons/likes.svg'
@@ -6,10 +7,10 @@ import likesLogo from '../../assets/icons/likes.svg'
 const VideoInfo = props => {
     // receiving the array from parent component 
     let currVidInfo = props.currentVid;
-    
-    //Setting up date from timestamp
+
+    // using date-fns library to format the date to match the diving deeper style guide
     const options = { year: 'numeric', month: 'numeric', day: 'numeric' }; 
-    const currVidDate = new Date (currVidInfo.timestamp).toLocaleDateString("en-US", options);
+    const currVidDate = formatDistanceToNow(currVidInfo.timestamp, [options]);
 
     return (
         <div className='viddetails'>
@@ -19,7 +20,7 @@ const VideoInfo = props => {
                 {/* Div 1 to hold channel name and views */}
                 <div className='viddetails__data-container body-copy'>
                     <p className="viddetails__data-container-channel">By {currVidInfo.channel}</p>
-                    <p className="viddetails__data-container-date">{currVidDate}</p>
+                    <p className="viddetails__data-container-date">{currVidDate} ago</p>
                 </div>
                 {/* Div 2 to hold upload date and likes */}
                 <div className='viddetails__data-container body-copy'>
