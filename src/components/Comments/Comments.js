@@ -6,12 +6,12 @@ import './_comments.scss'
 const Comments = props => {
     // getting an array of data of current video being displayed.
     let dynamicComments = props.currentVid.comments.map(i => {
-        
+ 
         //converting numeric timestamps to dates
         const options = { year: 'numeric', month: 'numeric', day: 'numeric' }; 
         const dateStr = formatDistanceToNow(i.timestamp, [options]);
 
-        return <div className='comments__dynamic body-copy'>
+        return <div key={i.timestamp} className='comments__dynamic body-copy'>
             <div className = 'comments__dynamic-div'>
                 <div className='comments__dynamic-img'></div>
             </div>
@@ -34,7 +34,7 @@ const Comments = props => {
             <div className="comments__input">
                     <img className="comments__input-img" src={userImg} alt="UserId"/>
                     <form className="comments__input-info-form">
-                        <label className="section-header" for="comment-field">JOIN THE CONVERSATION</label>
+                        <label className="section-header" htmlFor="comment-field">JOIN THE CONVERSATION</label>
                         <div className='comments__input-info-form-container'>
                             <textarea required className="comments__input-info-form-comment body-copy" id="comment-field" name="comment" placeholder="Add a new comment"></textarea>
                             <button className="comments__input-info-form-btn">COMMENT</button>

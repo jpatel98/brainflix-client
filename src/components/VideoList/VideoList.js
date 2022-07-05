@@ -12,7 +12,7 @@ const VideoList = props => {
             props.onSelectVid(nested.id);
         }
 
-        return <div className='vidlist__container-item'>
+        return <div key={nested.id} className='vidlist__container-item'>
             <a 
                 href={`/videos/${nested.id}`}
                 onClick={handleVideoSelect}
