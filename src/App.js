@@ -18,6 +18,9 @@ class App extends React.Component {
 
   selectVideo = (videoId) => {
     const selectedVideo = vidDataDetails.find(video => video.id === videoId);
+
+    window.scrollTo(0, 0);
+    
     this.setState({
       currentVid: selectedVideo
     })
