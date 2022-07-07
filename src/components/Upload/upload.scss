@@ -25,12 +25,15 @@
         background-color: $alabaster;
         border-radius: 0.25rem;
         border: 1.5px solid $mercury;
-        padding: 0.625rem;
+        padding: 0.5rem;
         margin-bottom: 1.5rem;
         resize: none;
+        color: $brainflix-black;
+        font-family: 'Avenir Next';
+        opacity: 1;
       }
       &-description {
-        height: 5rem;
+        height: 4rem;
         width: 100%;
         background-color: $alabaster;
         border-radius: 0.25rem;
@@ -40,6 +43,9 @@
         resize: none;   
         box-sizing: border-box;
         overflow:hidden; 
+        color: $brainflix-black;
+        font-family: 'Avenir Next';
+        opacity: 1;
       }
       &-title:focus,
       &-description:focus {
