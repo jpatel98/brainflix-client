@@ -1,6 +1,6 @@
 import React from 'react';
 import { formatDistanceToNow } from 'date-fns';
-import './_videoinfo.scss';
+import './VideoInfo.scss';
 import viewsLogo from '../../assets/icons/views.svg'
 import likesLogo from '../../assets/icons/likes.svg'
 

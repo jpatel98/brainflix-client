@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './_videolist.scss';
+import './VideoList.scss';
 
 const VideoList = props => {
     const vidListArr = props.vidList;

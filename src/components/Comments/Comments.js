@@ -1,7 +1,7 @@
 import React from 'react';
 import { formatDistanceToNow } from 'date-fns';
 import userImg from '../../assets/images/Mohan-muruge.jpg'
-import './_comments.scss'
+import './Comments.scss'
 
 const Comments = props => {
     // getting an array of data of current video being displayed.

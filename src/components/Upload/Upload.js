@@ -1,6 +1,6 @@
 import React from 'react';
 import thumbnail from '../../assets/images/Upload-preview.jpg'
-import './upload.scss'
+import './Upload.scss'
 
 const Upload = () => {
     return (

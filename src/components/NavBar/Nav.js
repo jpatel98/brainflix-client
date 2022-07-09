@@ -1,7 +1,7 @@
 import logo from '../../assets/logo/BrainFlix-logo.svg';
 import userImg from '../../assets/images/Mohan-muruge.jpg'
 import { NavLink } from 'react-router-dom';
-import './_nav.scss'
+import './Nav.scss'
 
 const nav = () => {
     return (
