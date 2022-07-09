@@ -18,7 +18,7 @@ class MainPage extends React.Component{
     currentVid: null
   }
 
-  selectVideo = (videoId) => {
+  handleSelectVideo = (videoId) => {
     // https://project-2-api.herokuapp.com/videos/videoId?api_key=<API_KEY>
     axios
       .get(`${API_URL}/videos/${videoId}?api_key=${API_KEY}`)
@@ -48,7 +48,7 @@ class MainPage extends React.Component{
       })
       .then(firstVideoId => {
         const videoToLoad = currVideoId !== undefined ? currVideoId : firstVideoId;
-        this.selectVideo(videoToLoad) 
+        this.handleSelectVideo(videoToLoad) 
       })
       .catch((error) => {
         console.log(error);
@@ -60,7 +60,7 @@ class MainPage extends React.Component{
     // console.log(prevProps);
     if (prevProps.match.params.videoId !== newVideoId){
       const videoToLoad = newVideoId !== undefined ? newVideoId : this.state.videos[0].id;
-      this.selectVideo(videoToLoad);
+      this.handleSelectVideo(videoToLoad);
     }
   }
   
@@ -80,7 +80,7 @@ class MainPage extends React.Component{
                     <VideoInfo currentVid={this.state.currentVid}/>
                     <Comments currentVid={this.state.currentVid}/>
                     </div>
-                    <div className='div3'><VideoList vidList = {filteredVid} onSelectVid = {this.selectVideo}/></div>
+                    <div className='div3'><VideoList vidList = {filteredVid} onSelectVid = {this.handleSelectVideo}/></div>
                 </div>   
             </main>
           );
