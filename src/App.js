@@ -15,7 +15,7 @@ class App extends React.Component {
         <NavBar/>
         <Switch>
           <Route path='/' exact component={MainPage} />
-
+          <Route path='/videos/:videoId' component={MainPage} />
           <Route path='/upload' exact component={Upload} />
         </Switch>
       </Router>

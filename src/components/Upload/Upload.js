@@ -2,7 +2,7 @@ import React from 'react';
 import thumbnail from '../../assets/images/Upload-preview.jpg'
 import './upload.scss'
 
-function Upload() {
+const Upload = () => {
     return (
         <div className="upload">
       <div className="upload__margin">
