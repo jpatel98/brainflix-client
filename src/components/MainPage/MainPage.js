@@ -4,6 +4,7 @@ import VideoInfo from '../VideoInfo/VideoInfo';
 import Comments from '../Comments/Comments';
 import VideoList from '../VideoList/VideoList';
 import axios from 'axios';
+import Loading from '../Loading/Loading';
 // import vidDataDetails from '../../data/video-details.json';
 // import vidData from '../../data/videos.json'
 
@@ -68,7 +69,7 @@ class MainPage extends React.Component{
       // filtering through the videos to find the current video based on the id
 
       if (this.state.currentVid == null) {
-        return <p>Loading...</p>
+        return <Loading />
       } else {
           const filteredVid = this.state.videos.filter(video => video.id !== this.state.currentVid.id);
           return (
