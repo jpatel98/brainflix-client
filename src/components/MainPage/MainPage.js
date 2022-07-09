@@ -30,7 +30,7 @@ class MainPage extends React.Component{
       .catch((error) => {
         console.log(error);
     })
-    console.log(videoId);
+    // console.log(videoId);
     window.scrollTo(0, 0);
   }
 
@@ -56,7 +56,7 @@ class MainPage extends React.Component{
   
   componentDidUpdate(prevProps) {
     const newVideoId = this.props.match.params.videoId;
-    console.log(prevProps);
+    // console.log(prevProps);
     if (prevProps.match.params.videoId !== newVideoId){
       const videoToLoad = newVideoId !== undefined ? newVideoId : this.state.videos[0].id;
       this.selectVideo(videoToLoad);

@@ -7,11 +7,11 @@ const VideoList = props => {
 
     const vidList = vidListArr.map((nested) => {
 
-        const handleVideoSelect = (event) => {
-            event.preventDefault();
+        // const handleVideoSelect = (event) => {
+        //     event.preventDefault();
         
-            props.onSelectVid(nested.id);
-        }
+        //     props.onSelectVid(nested.id);
+        // }
         return <div key={nested.id} className='vidlist__container-item'>
             <NavLink to={`/videos/${nested.id}`} >
                 <div><img src={nested.image} alt="placeholder" className='vidlist__container-item-image'/></div>
