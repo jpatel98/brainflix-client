@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/Nav';
 import Upload from './components/Upload/Upload';
 import MainPage from './components/MainPage/MainPage';
+import PageNotFound from './components/PageNotFound/PageNotFound';
 import './App.scss';
 
 
@@ -17,6 +18,7 @@ class App extends React.Component {
           <Route path='/' exact component={MainPage} />
           <Route path='/videos/:videoId' exact component={MainPage} />
           <Route path='/upload' exact component={Upload} />
+          <Route path='*' component={PageNotFound} />
         </Switch>
       </Router>
     );

@@ -23,7 +23,7 @@ class MainPage extends React.Component{
     axios
       .get(`${API_URL}/videos/${videoId}?api_key=${API_KEY}`)
       .then(response => {
-        console.log(response.data);
+        // console.log(response.data);
         this.setState({
           currentVid: response.data
         });
@@ -68,7 +68,7 @@ class MainPage extends React.Component{
     // console.log(this.state.videos.length);
       // filtering through the videos to find the current video based on the id
 
-      if (this.state.currentVid == null) {
+      if (this.state.currentVid === null) {
         return <Loading />
       } else {
           const filteredVid = this.state.videos.filter(video => video.id !== this.state.currentVid.id);
