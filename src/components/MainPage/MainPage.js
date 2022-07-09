@@ -23,7 +23,7 @@ class MainPage extends React.Component{
     axios
       .get(`${API_URL}/videos/${videoId}?api_key=${API_KEY}`)
       .then(response => {
-        // console.log(response.data);
+        console.log(response.data);
         this.setState({
           currentVid: response.data
         });
