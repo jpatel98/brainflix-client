@@ -18,7 +18,7 @@ class App extends React.Component {
           <Route path='/' exact component={MainPage} />
           <Route path='/videos/:videoId' exact component={MainPage} />
           <Route path='/upload' exact component={Upload} />
-          <Route path='*' component={PageNotFound} />
+          <Route component={PageNotFound} />
         </Switch>
       </Router>
     );
