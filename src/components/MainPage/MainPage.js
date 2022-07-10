@@ -5,8 +5,7 @@ import Comments from '../Comments/Comments';
 import VideoList from '../VideoList/VideoList';
 import axios from 'axios';
 import Loading from '../Loading/Loading';
-// import vidDataDetails from '../../data/video-details.json';
-// import vidData from '../../data/videos.json'
+
 
 const API_URL = 'https://project-2-api.herokuapp.com';
 const API_KEY = '519f047c-62a1-461d-bc03-07a951d18617';
@@ -65,7 +64,7 @@ class MainPage extends React.Component{
   }
   
   render(){
-    // console.log(this.state.videos.length);
+
       // filtering through the videos to find the current video based on the id
 
       if (this.state.currentVid === null) {

@@ -7,6 +7,7 @@ import likesLogo from '../../assets/icons/likes.svg'
 const VideoInfo = props => {
     // receiving the array from parent component 
     let currVidInfo = props.currentVid;
+    
 
     // using date-fns library to format the date to match the diving deeper style guide
     const options = { year: 'numeric', month: 'numeric', day: 'numeric' }; 
