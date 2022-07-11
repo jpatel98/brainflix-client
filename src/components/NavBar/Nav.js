@@ -11,9 +11,9 @@ const nav = () => {
             </NavLink>
             <div className='navbar__search'>
                     <input type="text" placeholder='Search' className='navbar__search-input'></input>
-                        <img src={userImg} alt="User profile" className='navbar__search-userImg'/>
-            </div>
-            <NavLink to="/upload" exact className='navbar__upload button-text'>UPLOAD</NavLink> 
+                    <img src={userImg} alt="User profile" className='navbar__search-userImg'/>
+                    <NavLink to="/upload" exact className='navbar__search-upload button-text'>UPLOAD</NavLink>
+            </div> 
         </nav>
     );
 };
