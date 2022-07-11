@@ -1,10 +1,10 @@
 import React from 'react';
-import Hero from '../Hero/Hero';
-import VideoInfo from '../VideoInfo/VideoInfo';
-import Comments from '../Comments/Comments';
-import VideoList from '../VideoList/VideoList';
+import Hero from '../../components/Hero/Hero';
+import VideoInfo from '../../components/VideoInfo/VideoInfo';
+import Comments from '../../components/Comments/Comments';
+import VideoList from '../../components/VideoList/VideoList';
 import axios from 'axios';
-import Loading from '../Loading/Loading';
+import Loading from '../../components/Loading/Loading';
 
 
 const API_URL = 'https://project-2-api.herokuapp.com';
