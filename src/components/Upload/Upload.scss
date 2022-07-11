@@ -101,17 +101,16 @@
   .redirect{
     background-image: url('/assets/icons/publish-success.png');
     background-repeat: no-repeat;
-    background-size: 15%;
-    background-position: right;
-    background-position-x: 6.25rem;
-    background-position-y: center;
+    background-position: left;
+    background-size: 1.75rem;
+    background-position: 1rem;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     background-color: $brainflix-darkblue;
-    padding-right: 1.5rem;
   }
 
   .no-redirect{
@@ -138,22 +137,32 @@
         width: 21.5rem;
         margin-bottom: 2.5rem;
       }
-      &__form-description {
-      }
       &__button-container {
         border-top: 1.5px solid $mercury;
         padding: 2.5rem 0 10rem;
         display: flex;
         flex-direction: row-reverse;
-        
       }
       &__button-publish {
-        width: 10rem;
+        width: 11rem;
       }
       &__button-cancel {
         width: auto;
         margin-right: 3rem;
       }
+    }
+    .redirect{
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: 1.75rem;
+      background-position: 1rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: $brainflix-darkblue;
     }
   }
   
@@ -172,8 +181,6 @@
       }
       &__description {
         padding-bottom: 0.4375rem;
-      }
-      &__form-title {
       }
       &__form-description {
         height: 5.875rem;
