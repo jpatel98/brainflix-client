@@ -114,9 +114,9 @@
         padding: 1.5rem 2.5rem;
         &__input{
             &-info-form{
+                display: flex;
                 &-container{
                     flex-direction: row;
-                    justify-content: space-between;
                     gap: 1rem;
                 }
                 &-comment{
@@ -134,10 +134,13 @@
 //desktop layout
 @include desktop {
     .comments{
-        padding-right: 0;
+        width: 100%;
         &__input{
             &-info-form{
                 padding-right: 1rem;
+                &-comment{
+                    height: 2.5rem;
+                }
             }
         }
         &__dynamic{

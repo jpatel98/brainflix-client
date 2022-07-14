@@ -20,7 +20,7 @@ class MainPage extends React.Component{
   handleSelectVideo = (videoId) => {
     // https://project-2-api.herokuapp.com/videos/videoId?api_key=<API_KEY>
     axios
-      .get(`${API_URL}/videos/${videoId}?api_key=${API_KEY}`)
+      .get(`http://localhost:8080/videos/${videoId}`)
       .then(response => {
         // console.log(response.data);
         this.setState({
@@ -38,7 +38,7 @@ class MainPage extends React.Component{
      const currVideoId = this.props.match.params.videoId;
       //https://project-2-api.herokuapp.com/videos?api_key=<API_KEY>
      axios
-      .get(`${API_URL}/videos?api_key=${API_KEY}`)
+      .get("http://localhost:8080/videos")
       .then(response => {
         this.setState({
           videos: response.data
