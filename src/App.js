@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/Nav';
-import Upload from './components/Upload/Upload';
+import Upload from './pages/Upload/Upload';
 import MainPage from './pages/MainPage/MainPage';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import './App.scss';

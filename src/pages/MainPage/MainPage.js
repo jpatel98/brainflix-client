@@ -7,8 +7,8 @@ import axios from 'axios';
 import Loading from '../../components/Loading/Loading';
 
 
-const API_URL = 'https://project-2-api.herokuapp.com';
-const API_KEY = '519f047c-62a1-461d-bc03-07a951d18617';
+// const API_URL = 'https://project-2-api.herokuapp.com';
+// const API_KEY = '519f047c-62a1-461d-bc03-07a951d18617';
 
 class MainPage extends React.Component{
 
