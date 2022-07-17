@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import thumbnail from '../../assets/images/Upload-preview.jpg'
 import { Link, Redirect } from 'react-router-dom';
 import './Upload.scss'
@@ -11,6 +11,7 @@ class Upload extends React.Component {
     published: false,
     redirect: false
   }
+
   handlePublish = (event) => {
     event.preventDefault();
     let newTitle = event.target.title.value;
@@ -35,9 +36,10 @@ class Upload extends React.Component {
           })
         }, 2000);
       })
-      
+  }
 
-
+  componentDidMount(){
+    document.title = "Upload";
   }
 
   render(){

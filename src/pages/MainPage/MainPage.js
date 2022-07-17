@@ -15,7 +15,6 @@ class MainPage extends React.Component{
   }
 
   handleSelectVideo = (videoId) => {
-    
     axios
       .get(`http://localhost:8080/videos/${videoId}`)
       .then(response => {
@@ -23,6 +22,7 @@ class MainPage extends React.Component{
         this.setState({
           currentVid: response.data
         });
+        (videoId !== "84e96018-4022-434e-80bf-000ce4cd12b8") ? document.title = `${response.data.title} - BrainFlix` : document.title = `Home - BrainFlix`
       })
       .catch((error) => {
         console.log(error);
@@ -35,6 +35,7 @@ class MainPage extends React.Component{
   }
 
   componentDidMount(){
+    document.title = "BrainFlix - Home"
      const currVideoId = this.props.match.params.videoId;
      axios
       .get("http://localhost:8080/videos")
@@ -46,7 +47,7 @@ class MainPage extends React.Component{
       })
       .then(firstVideoId => {
         const videoToLoad = currVideoId !== undefined ? currVideoId : firstVideoId;
-        this.handleSelectVideo(videoToLoad) 
+        this.handleSelectVideo(videoToLoad);
       })
       .catch((error) => {
         console.log(error);
@@ -55,7 +56,6 @@ class MainPage extends React.Component{
   
   componentDidUpdate(prevProps) {
     const newVideoId = this.props.match.params.videoId;
-    // console.log(prevProps);
     if (prevProps.match.params.videoId !== newVideoId){
       const videoToLoad = newVideoId !== undefined ? newVideoId : this.state.videos[0].id;
       this.handleSelectVideo(videoToLoad);
