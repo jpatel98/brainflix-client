@@ -5,10 +5,7 @@ import Comments from '../../components/Comments/Comments';
 import VideoList from '../../components/VideoList/VideoList';
 import axios from 'axios';
 import Loading from '../../components/Loading/Loading';
-
-
-// const API_URL = 'https://project-2-api.herokuapp.com';
-// const API_KEY = '519f047c-62a1-461d-bc03-07a951d18617';
+import PageNotFound from '../PageNotFound/PageNotFound';
 
 class MainPage extends React.Component{
 
@@ -18,7 +15,7 @@ class MainPage extends React.Component{
   }
 
   handleSelectVideo = (videoId) => {
-    // https://project-2-api.herokuapp.com/videos/videoId?api_key=<API_KEY>
+    
     axios
       .get(`http://localhost:8080/videos/${videoId}`)
       .then(response => {
@@ -29,6 +26,9 @@ class MainPage extends React.Component{
       })
       .catch((error) => {
         console.log(error);
+        this.setState({
+          currentVid: undefined
+        })
     })
     // console.log(videoId);
     window.scrollTo(0, 0);
@@ -36,7 +36,6 @@ class MainPage extends React.Component{
 
   componentDidMount(){
      const currVideoId = this.props.match.params.videoId;
-      //https://project-2-api.herokuapp.com/videos?api_key=<API_KEY>
      axios
       .get("http://localhost:8080/videos")
       .then(response => {
@@ -69,6 +68,8 @@ class MainPage extends React.Component{
 
       if (this.state.currentVid === null) {
         return <Loading />
+      } else if (this.state.currentVid === undefined) {
+        return <PageNotFound />
       } else {
           const filteredVid = this.state.videos.filter(video => video.id !== this.state.currentVid.id);
           return (
