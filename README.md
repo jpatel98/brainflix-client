@@ -9,7 +9,7 @@ A mock SPA (single page application) site for streaming videos. Demonstrating pr
 ## Goals and Requirements
 
 Goal was to build a full stack single page application using React, Express, and Node.js. 
-I also used an API to obtain the video data, stream URL as well as the default comments. 
+I also used a [server](https://github.com/jpatel98/jigar-patel-brainflix-api) to obtain the video data, stream URL as well as the default comments. 
 
 ## Key Learnings
 
